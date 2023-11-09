@@ -33,15 +33,6 @@ void setup() {
 //   const int rightSensor = analogRead(A2);
 // }
 
-void goStraight() {
-  digitalWrite(DC_Left1, HIGH);
-  digitalWrite(DC_Left2, LOW);
-  digitalWrite(DC_Right1, HIGH);
-  digitalWrite(DC_Right2, LOW);
-  analogWrite(ENA, 255);
-  analogWrite(ENB, 255);
-}
-
 void loop() {
   // put your main code here, to run repeatedly:
   const int midSensor = analogRead(A0);
