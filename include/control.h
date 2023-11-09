@@ -1,4 +1,8 @@
-#define LED 1
-#define LED 2
-void sang();
-void tat();
+void goStraight();
+void goBackward();
+void turnLeft();
+void turnRight();
+void stop();    
+
+// Path: src/control.cpp
+

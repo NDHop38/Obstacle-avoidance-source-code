@@ -1,19 +1,15 @@
 #include <Arduino.h>
-#include <control.h>\
-//DC left
-int ENA = 5;
-const int DC_Left1 = 8;
-const int DC_Left2 = 9;
-//DC right
-int ENB = 6;
-const int DC_Right1 = 10;
-const int DC_Right2 = 11;
+#include <control.h>
 
-// Pin sensor
+const int DC_Left1 = 2;
+const int DC_Left2 = 3;
+const int DC_Right1 = 4;
+const int DC_Right2 = 5;
+const int ENA = 6;
+const int ENB = 7;
 const int leftSensor = A1;
-const int midSensor = A0; // Initialize midSensor to a default value
+const int midSensor = A0;
 const int rightSensor = A2;
-
 
 void setup() {
   // put your setup code here, to run once:
@@ -29,6 +25,8 @@ void setup() {
   pinMode(midSensor, INPUT);
   pinMode(rightSensor, INPUT);
 }
+
+
 // void readSensor() {
 //   const int midSensor = analogRead(A0);
 //   const int leftSensor = analogRead(A1);
@@ -42,33 +40,6 @@ void goStraight() {
   digitalWrite(DC_Right2, LOW);
   analogWrite(ENA, 255);
   analogWrite(ENB, 255);
-}
-
-void goBackward() {
-  digitalWrite(DC_Left1, LOW);
-  digitalWrite(DC_Left2, HIGH);
-  digitalWrite(DC_Right1, LOW);
-  digitalWrite(DC_Right2, HIGH);
-  analogWrite(ENA, 255);
-  analogWrite(ENB, 255);
-}
-
-void turnLeft() {
-  digitalWrite(DC_Left1, LOW);
-  digitalWrite(DC_Left2, HIGH);
-  digitalWrite(DC_Right1, HIGH);
-  digitalWrite(DC_Right2, LOW);
-  analogWrite(ENA, 64);
-  analogWrite(ENB, 255);
-}
-
-void turnRight() {
-  digitalWrite(DC_Left1, HIGH);
-  digitalWrite(DC_Left2, LOW);
-  digitalWrite(DC_Right1, LOW);
-  digitalWrite(DC_Right2, HIGH);
-  analogWrite(ENA, 255);
-  analogWrite(ENB, 64);
 }
 
 void loop() {
@@ -122,16 +93,5 @@ void loop() {
   else {
     goStraight();
   }
-  sang();
-  // if(leftSensor < 500)
-  //   turnRight();
-  //   delay(5000);
-  //   turnLeft();
+
 }
-// void leftSensor(){
-//   if(leftSensor < 500)
-//     turnRight();
-//     delay(5000);
-//     turnLeft(); 
-  
-// }
