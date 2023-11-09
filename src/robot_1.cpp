@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <control.h>\
 //DC left
 int ENA = 5;
 const int DC_Left1 = 8;
@@ -121,6 +122,7 @@ void loop() {
   else {
     goStraight();
   }
+  sang();
   // if(leftSensor < 500)
   //   turnRight();
   //   delay(5000);
