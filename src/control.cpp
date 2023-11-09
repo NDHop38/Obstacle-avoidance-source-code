@@ -1,10 +1,10 @@
 #include "control.h"
 #include <Arduino.h>
-//DC left
+// DC left
 int ENA = 5;
 const int DC_Left1 = 8;
 const int DC_Left2 = 9;
-//DC right
+// DC right
 int ENB = 6;
 const int DC_Right1 = 10;
 const int DC_Right2 = 11;
@@ -12,7 +12,8 @@ const int DC_Right2 = 11;
 const int leftSensor = A1;
 const int midSensor = A0; // Initialize midSensor to a default value
 const int rightSensor = A2;
-void goBackward() {
+void goBackward()
+{
   digitalWrite(DC_Left1, LOW);
   digitalWrite(DC_Left2, HIGH);
   digitalWrite(DC_Right1, LOW);
@@ -20,7 +21,8 @@ void goBackward() {
   analogWrite(ENA, 255);
   analogWrite(ENB, 255);
 }
-void goStraight() {
+void goStraight()
+{
   digitalWrite(DC_Left1, HIGH);
   digitalWrite(DC_Left2, LOW);
   digitalWrite(DC_Right1, HIGH);
@@ -28,7 +30,8 @@ void goStraight() {
   analogWrite(ENA, 255);
   analogWrite(ENB, 255);
 }
-void turnLeft() {
+void turnLeft()
+{
   digitalWrite(DC_Left1, LOW);
   digitalWrite(DC_Left2, HIGH);
   digitalWrite(DC_Right1, HIGH);
@@ -36,7 +39,8 @@ void turnLeft() {
   analogWrite(ENA, 255);
   analogWrite(ENB, 255);
 }
-void turnRight() {
+void turnRight()
+{
   digitalWrite(DC_Left1, HIGH);
   digitalWrite(DC_Left2, LOW);
   digitalWrite(DC_Right1, LOW);
@@ -44,7 +48,8 @@ void turnRight() {
   analogWrite(ENA, 255);
   analogWrite(ENB, 255);
 }
-void stop() {
+void stop()
+{
   digitalWrite(DC_Left1, LOW);
   digitalWrite(DC_Left2, LOW);
   digitalWrite(DC_Right1, LOW);
