@@ -1,12 +1,12 @@
 #include <Arduino.h>
 #include <control.h>
 
-const int DC_Left1 = 2;
-const int DC_Left2 = 3;
-const int DC_Right1 = 4;
-const int DC_Right2 = 5;
-const int ENA = 6;
-const int ENB = 7;
+const int DC_Left1 = 8;
+const int DC_Left2 = 9;
+const int DC_Right1 = 10;
+const int DC_Right2 = 11;
+const int ENA = 5;
+const int ENB = 6;
 const int leftSensor = A1;
 const int midSensor = A2;
 const int rightSensor = A0;
