@@ -8,8 +8,8 @@ const int DC_Right2 = 5;
 const int ENA = 6;
 const int ENB = 7;
 const int leftSensor = A1;
-const int midSensor = A0;
-const int rightSensor = A2;
+const int midSensor = A2;
+const int rightSensor = A0;
 
 void setup()
 {
@@ -36,9 +36,9 @@ void setup()
 void loop()
 {
   // put your main code here, to run repeatedly:
-  const int midSensor = analogRead(A0);
+  const int midSensor = analogRead(A2);
   const int leftSensor = analogRead(A1);
-  const int rightSensor = analogRead(A2);
+  const int rightSensor = analogRead(A0);
   // cam bien truoc nhan
   if (midSensor < 500)
   {
