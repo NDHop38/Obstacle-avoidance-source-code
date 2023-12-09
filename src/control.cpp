@@ -36,7 +36,7 @@ void turnLeft()
   digitalWrite(DC_Left2, HIGH);
   digitalWrite(DC_Right1, HIGH);
   digitalWrite(DC_Right2, LOW);
-  analogWrite(ENA, 255);
+  analogWrite(ENA, 125);
   analogWrite(ENB, 255);
 }
 void turnRight()
@@ -46,7 +46,7 @@ void turnRight()
   digitalWrite(DC_Right1, LOW);
   digitalWrite(DC_Right2, HIGH);
   analogWrite(ENA, 255);
-  analogWrite(ENB, 255);
+  analogWrite(ENB, 125);
 }
 void stop()
 {
